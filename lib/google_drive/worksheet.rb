@@ -348,6 +348,9 @@ module GoogleDrive
         end
       end
       self.max_rows -= rows
+
+      # 削除した時に列数が変わらないためFIX
+      @num_rows = rows
     end
 
     # Inserts columns.
